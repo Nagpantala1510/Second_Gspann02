@@ -1,4 +1,4 @@
-  def justify_paragraph(paragraph, page_width):
+def justify_paragraph(paragraph, page_width):
     # Check if page_width is a positive integer
     if not isinstance(page_width, int) or page_width <= 0:
          raise ValueError("Page width should be a positive integer.")
@@ -69,12 +69,11 @@
 # Prompt message to ask user input for paragraph and page width
 paragraph = input("Enter the paragraph: ")
 page_width = int(input("Enter the page width: "))
-
-
-# Calling justifed lines and printing the lines
-justified_lines = justify_paragraph(paragraph, page_width)
-for line in justified_lines:
-    print(line)
+try:
+   # Calling justifed lines and printing the lines
+    justified_lines = justify_paragraph(paragraph, page_width)
+    for line in justified_lines:
+        print(line)
 
 except ValueError as ve:
     print(f"Error: {ve}")
